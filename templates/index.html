@@ -1,0 +1,33 @@
+{% extends 'homepage.html' %}
+{% load static %}
+{% block content %}
+{% include 'include/header.html' %}
+<main>
+  <section class="acme">
+    <div class="acme__container">
+      <div class="acme__left">
+        <div class="acme__content">
+          <h1 class="acme__left-title">
+            Тут какой-то <span>слоган</span>
+          </h1>
+          <p class="acme__left-text">
+            Сервис для игры в шахматы. Описание сервиса. Описание
+            сервиса. Описание сервиса. Описание сервиса. Описание
+            сервиса. Описание сервиса. Описание сервиса.
+          </p>
+          <button class="acme__left-btn">
+            <a href="#">Попробовать сервис</a>
+          </button>
+        </div>
+      </div>
+      <div class="acme__right">
+        <img class="acme__right-img" src="{% static '/img/preview.jpg' %}" alt="" />
+      </div>
+    </div>
+  </section>
+</main>
+</div>
+{% include 'include/footer.html' %}
+</div>
+
+{% endblock %}

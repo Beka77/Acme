@@ -1,0 +1,36 @@
+{% extends 'homepage.html' %}
+{% load static %}
+{% block content %}
+
+{% include 'include/header.html' %}
+<main>
+  <section class="login">
+    <div class="login__container">
+      <div class="login__left">
+        <form class="login__content" method="POST">
+          {% csrf_token %}
+          <h2 class="login__content-title">Вход</h2>
+          <p class="login__content-text">
+            Добро пожаловать на сервис! Войдите в свой аккаунт.
+          </p>
+          <label class="login__inputs">
+            <input type="text" name="username" placeholder="логин" />
+            <input type="text" name="password" id="password" placeholder="пароль" />
+          </label>
+          <button id="btn" type="submit" class="login__content-btn">
+            <span>Вход</span>
+          </button>
+        </form>
+      </div>
+      <div class="login__right">
+        <div class="login__img">
+          <img src="{% static '/img/horse_back.jpg' %}" alt="" />
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+</div>
+{% include 'include/footer.html' %}
+</div>
+{% endblock %}

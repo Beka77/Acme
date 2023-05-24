@@ -1,0 +1,40 @@
+{% extends 'homepage.html' %}
+{% load static %}
+{% block content %}
+<div class="page-container">
+  <div class="content-wrap">
+    {% include 'include/header.html' %}
+    <main>
+      <section class="signup">
+        <div class="signup__container">
+          <div class="signup__left">
+            <form class="signup__content" method="POST">
+              {% csrf_token %}
+              <h2 class="signup__content-title">Регистрация</h2>
+              <p class="signup__content-text">
+                Зарегистрируйте свой первый аккаунт на сервисе название. Или
+                войдите в уже существующий аккаунт.
+              </p>
+              <label class="signup__inputs">
+                <input type="text" name="username" placeholder="логин" />
+                <input type="password" name="password" placeholder="пароль" />
+                <input type="password" name="password2" placeholder="пароль" />
+              </label>
+              <button class="signup__content-btn" type="submit">
+                <span>Регистрация</span>
+              </button>
+            </form>
+          </div>
+          <div class="signup__right">
+            <div class="signup__img">
+              <img src="{% static '/img/horse_back.jpg' %}" alt="" />
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+  </div>
+  {% include 'include/footer.html' %}
+</div>
+</div>
+{% endblock %}
